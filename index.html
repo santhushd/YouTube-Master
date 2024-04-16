@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Heshan</title>
+</head>
+<body class="crm_body_bg">
+    
+<section class="custom_container mt-20">
+<div class="mt-10">
+<div class="yt-input">
+<div id="divInput" class="text-center">
+<form action="/analyze">
+<input class="deletable" id="txtUrl" name="url" type="text" placeholder="Paste Youtube link" autocomplete="off">
+<button type="button" value="Start" id="btnSubmit" onclick="getListFormats();"><span class="start-btn">Start</span><span class="glyphicon glyphicon-arrow-right"></span>
+</button>
+</form>
+
+<div id="imgAnalyzer" style="display: none;"><img alt="video info is loading" src="https://en.y2mate.is/assets/images/loading2.gif"></div>
+</div>
+</div>
+<div id="result">
+<div class="row">
+<div class="col-md-6 text-center">
+<div id="info">
+<div id="divThumbnail">
+<img id="thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" title="thumbnail" alt="thumbnail" class="img1x1">
+</div>
+<div id="videoTitle" class="text-center"></div>
+</div>
+</div>
+<div class="col-md-6">
+<div id="mytab" style="width: 100%;">
+<div class="tab" id="tabs">
+
+<button class="tablinks active" onclick="openTab(event, 'tabVideo')" id="defaultOpen"><span class="glyphicon glyphicon-film"></span>Video</button>
+<button class="tablinks" onclick="openTab(event, 'tabAudio')"><span class="glyphicon glyphicon-music"></span>Audio</button>
+
+</div>
+<div id="tabVideo" class="tabcontent"></div>
+<div id="tabAudio" style="display:none;" class="tabcontent"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="error" style="display: none;" class="caption text-left">
+<div id="error-text" role="alert" class="alert alert-danger text-center"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> </div>
+</div>
+</section>
+
+<script>var WEBSITE_URL = 'https://y2mate.is';</script>
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+<script defer type="text/javascript" src="script.js"></script>
+</body>
+</html>
